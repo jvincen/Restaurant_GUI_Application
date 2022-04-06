@@ -1,0 +1,79 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.control.Button?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.control.TextField?>
+<?import javafx.scene.image.Image?>
+<?import javafx.scene.image.ImageView?>
+<?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.text.Font?>
+
+<AnchorPane maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="600.0" prefWidth="1000.0" style="-fx-background-color: azure;" xmlns="http://javafx.com/javafx/18" xmlns:fx="http://javafx.com/fxml/1" fx:controller="application.SceneControllerAdmin">
+   <children>
+      <Button layoutX="895.0" layoutY="27.0" mnemonicParsing="false" text="Log Out">
+         <font>
+            <Font size="14.0" />
+         </font></Button>
+      <Label layoutX="434.0" layoutY="7.0" text="ADMIN MENU">
+         <font>
+            <Font name="System Bold" size="27.0" />
+         </font>
+      </Label>
+      <Label layoutX="14.0" layoutY="88.0" text="STARTERS">
+         <font>
+            <Font name="System Bold" size="20.0" />
+         </font>
+      </Label>
+      <Label layoutX="14.0" layoutY="319.0" text="MAIN COURSE">
+         <font>
+            <Font name="System Bold" size="20.0" />
+         </font>
+      </Label>
+      <ImageView fx:id="FrenchToastImage" fitHeight="120.0" fitWidth="160.0" layoutX="14.0" layoutY="159.0" pickOnBounds="true" preserveRatio="true">
+         <image>
+            <Image url="@frenchToast.jpg" />
+         </image>
+      </ImageView>
+      <ImageView fx:id="GreenSaladImage" fitHeight="107.0" fitWidth="160.0" layoutX="299.0" layoutY="159.0" pickOnBounds="true">
+         <image>
+            <Image url="@GreenSalad.jpg" />
+         </image>
+      </ImageView>
+      <ImageView fx:id="SesameNoodleImage" fitHeight="107.0" fitWidth="160.0" layoutX="14.0" layoutY="401.0" pickOnBounds="true">
+         <image>
+            <Image url="@SesameNoodles.jpg" />
+         </image>
+      </ImageView>
+      <ImageView fx:id="GarlicButterChickenImage" fitHeight="107.0" fitWidth="160.0" layoutX="299.0" layoutY="401.0" pickOnBounds="true">
+         <image>
+            <Image url="@GarlicButterChicken.jpg" />
+         </image>
+      </ImageView>
+      <ImageView fx:id="ChickenLollipopImage" fitHeight="107.0" fitWidth="160.0" layoutX="564.0" layoutY="159.0" pickOnBounds="true">
+         <image>
+            <Image url="@ChickenLollipop.jpeg" />
+         </image>
+      </ImageView>
+      <Button fx:id="AdminMenuPageButton" layoutX="655.0" layoutY="514.0" mnemonicParsing="false" onAction="#switchToMenuPage" text="Go back to Menu Page" />
+      <TextField fx:id="OneAdminTitle" layoutX="13.0" layoutY="123.0" prefHeight="26.0" prefWidth="97.0" promptText="Name" />
+      <Button fx:id="SaveTitleOne" layoutX="129.0" layoutY="123.0" mnemonicParsing="false" onAction="#ChangeOneName" prefHeight="26.0" prefWidth="45.0" text="Save" />
+      <TextField fx:id="TwoAdminTitle" layoutX="299.0" layoutY="123.0" prefHeight="26.0" prefWidth="97.0" promptText="Name" />
+      <Button fx:id="SaveTitleTwo" layoutX="411.0" layoutY="123.0" mnemonicParsing="false" onAction="#ChangeTwoName" prefHeight="26.0" prefWidth="45.0" text="Save" />
+      <TextField fx:id="ThreeAdminTitle" layoutX="564.0" layoutY="123.0" prefHeight="26.0" prefWidth="97.0" promptText="Name" />
+      <Button fx:id="SaveTitleThree" layoutX="676.0" layoutY="123.0" mnemonicParsing="false" onAction="#ChangeThreeName" prefHeight="26.0" prefWidth="45.0" text="Save" />
+      <TextField fx:id="FourAdminTitle" layoutX="13.0" layoutY="354.0" prefHeight="26.0" prefWidth="97.0" promptText="Name" />
+      <Button fx:id="SaveTitleFour" layoutX="129.0" layoutY="354.0" mnemonicParsing="false" onAction="#ChangeFourName" prefHeight="26.0" prefWidth="45.0" text="Save" />
+      <TextField fx:id="FiveAdminTitle" layoutX="299.0" layoutY="354.0" prefHeight="26.0" prefWidth="97.0" promptText="Name" />
+      <Button fx:id="SaveTitleFive" layoutX="416.0" layoutY="354.0" mnemonicParsing="false" onAction="#ChangeFiveName" prefHeight="26.0" prefWidth="45.0" text="Save" />
+      <TextField fx:id="OneAdminPrice" layoutX="13.0" layoutY="274.0" prefHeight="26.0" prefWidth="97.0" promptText="Price (ex: 4.99)" />
+      <Button fx:id="SavePriceOne" layoutX="129.0" layoutY="274.0" mnemonicParsing="false" onAction="#ChangeOnePrice" prefHeight="26.0" prefWidth="45.0" text="Save" />
+      <TextField fx:id="TwoAdminPrice" layoutX="299.0" layoutY="274.0" prefHeight="26.0" prefWidth="97.0" promptText="Price (ex: 4.99)" />
+      <Button fx:id="SavePriceTwo" layoutX="411.0" layoutY="274.0" mnemonicParsing="false" onAction="#ChangeTwoPrice" prefHeight="26.0" prefWidth="45.0" text="Save" />
+      <TextField fx:id="ThreeAdminPrice" layoutX="564.0" layoutY="274.0" prefHeight="26.0" prefWidth="97.0" promptText="Price (ex: 4.99)" />
+      <Button fx:id="SavePriceThree" layoutX="676.0" layoutY="274.0" mnemonicParsing="false" onAction="#ChangeThreePrice" prefHeight="26.0" prefWidth="45.0" text="Save" />
+      <TextField fx:id="FourAdminPrice" layoutX="13.0" layoutY="514.0" prefHeight="26.0" prefWidth="97.0" promptText="Price (ex: 4.99)" />
+      <Button fx:id="SavePriceFour" layoutX="129.0" layoutY="514.0" mnemonicParsing="false" onAction="#ChangeFourPrice" prefHeight="26.0" prefWidth="45.0" text="Save" />
+      <TextField fx:id="FiveAdminPrice" layoutX="299.0" layoutY="514.0" prefHeight="26.0" prefWidth="97.0" promptText="Price (ex: 4.99)" />
+      <Button fx:id="SavePriceFive" layoutX="411.0" layoutY="514.0" mnemonicParsing="false" onAction="#ChangeFivePrice" prefHeight="26.0" prefWidth="45.0" text="Save" />
+   </children>
+</AnchorPane>
