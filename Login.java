@@ -1,15 +1,20 @@
-
 import javafx.application.*;
+import javafx.event.ActionEvent;
+import javafx.event.EventHandler;
+import javafx.fxml.FXMLLoader;
 import javafx.geometry.HPos;
 import javafx.geometry.Insets;
 import javafx.geometry.Pos;
+import javafx.scene.Node;
 import javafx.scene.Scene;
 import javafx.scene.control.*;
+import javafx.scene.control.Alert.AlertType;
 import javafx.scene.image.Image;
 import javafx.scene.image.ImageView;
 import javafx.scene.layout.BorderPane;
 import javafx.scene.layout.*;
 import javafx.stage.Stage;
+import javafx.stage.Window;
 
 public class Login extends Application {
 
@@ -40,14 +45,15 @@ public class Login extends Application {
         container.setVgap(10);
 
         // image
-        ImageView image = new ImageView(new Image("file:icon.jpg"));
+        ImageView image = new ImageView(new Image("file:icon.jpeg"));
         image.setFitWidth(250);
         image.setFitHeight(150);
 
         // input fields
-        PasswordField tf1 = new PasswordField();
+        TextField tf1 = new TextField();
         tf1.setPromptText("Email Address");
-
+        
+        
         PasswordField tf2 = new PasswordField();
         tf2.setPromptText("Password");
 
@@ -93,5 +99,29 @@ public class Login extends Application {
         l3.setStyle(linkStyle);
 
         rootPane.setStyle(backgroundStyle);
+    
+    login.setOnAction(new EventHandler<ActionEvent>() {
+        @Override
+        public void handle(ActionEvent event) {
+        	if(tf1.getText().isEmpty()) {
+                showAlert(Alert.AlertType.ERROR, rootPane.getScene().getWindow(), "Form Error!", "Please enter your username");
+                return;
+            }
+        	if(tf2.getText().isEmpty()) {
+                showAlert(Alert.AlertType.ERROR, rootPane.getScene().getWindow(), "Form Error!", "Please enter your password");
+                return;
+            }
+            showAlert(Alert.AlertType.CONFIRMATION, rootPane.getScene().getWindow(), "Login Successful!", "Welcome " + tf1.getText());
+        }
+    });
+}
+
+	 private void showAlert(Alert.AlertType alertType, Window owner, String title, String message) {
+        Alert alert = new Alert(alertType);
+        alert.setTitle(title);
+        alert.setHeaderText(null);
+        alert.setContentText(message);
+        alert.initOwner(owner);
+        alert.show();
     }
 }
